@@ -5,7 +5,7 @@ const ComponentTwo = () => {
     <div className="w-full h-auto p-2">
       <div className="flex flex-row justify-between">
         <p className="text-white text-sm font-semibold">Popular albums</p>
-        <p className="text-[#B3B3B3] text-xs">show all</p>
+        <p className="text-[#B3B3B3] text-xs cursor-pointer">show all</p>
       </div>
       <div className="flex flex-row">
         <div className="m-4">
