@@ -2,7 +2,8 @@ import React from "react";
 import Logo from "../img/homePage/Logo.png";
 
 import { FaHouse, FaBuffer } from "react-icons/fa6";
-import { FaSearch, FaPlus } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
+import SearchTrack from "./SearchTrack";
 
 const Sidebar = () => {
   return (
@@ -17,10 +18,7 @@ const Sidebar = () => {
               <FaHouse className="text-white text-2xl" />
               <span className="text-white">Home</span>
             </div>
-            <div className="flex flex-row gap-1 ml-0.5 cursor-pointer">
-              <FaSearch className="text-white text-xl" />
-              <span className="text-white">Search</span>
-            </div>
+            <SearchTrack />
           </div>
         </div>
         <div className=" h-96 m-2 rounded-md">

@@ -16,7 +16,7 @@ const ComponentTwo = () => {
           />
           <div className="flex flex-col my-2">
             <p className="text-white">Artist Name</p>
-            <p className="text-[#B3B3B3]">Title</p>
+            <p className="text-[#B3B3B3] ">Title</p>
           </div>
         </div>
       </div>

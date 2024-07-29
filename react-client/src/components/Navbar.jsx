@@ -1,5 +1,6 @@
 import React from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import LoginButton from "./LoginButton";
 
 const Navbar = () => {
   return (
@@ -11,9 +12,7 @@ const Navbar = () => {
         </div>
         <div className="flex flex-row gap-3 m-4">
           <button className="text-white text-xs font-bold">Sign up</button>
-          <button className="text-black text-xs font-bold bg-white px-3 py-1 rounded-full">
-            Log in
-          </button>
+          <LoginButton />
         </div>
       </div>
     </div>
