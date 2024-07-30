@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const LoginButton = () => {
-  const client_id = "8e8f3372574c49fcb72901b9afc56775";
+  const client_id = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
   const scope = "user-read-currently-playing";
   const redirect_uri = "http://localhost:3000";
   const [accessToken, setAccessToken] = useState(null);
