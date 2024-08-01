@@ -12,17 +12,15 @@ const ComponentThree = () => {
     fetchCategories();
   }, []);
 
-  const limitedCategories = categories.slice(0, 5); //slice first 5
   // console.log(categories);
   return (
     <div className="w-full h-auto p-2">
       <div className="flex flex-row justify-between">
         <p className="text-white text-sm font-semibold">All Categories</p>
-        <p className="text-[#B3B3B3] text-xs">show all</p>
       </div>
-      <div className="flex flex-row justify-center overflow-x-auto scrollbar-hide">
-        {limitedCategories.length > 0 ? (
-          limitedCategories.map((category) => (
+      <div className="flex flex-row overflow-x-auto scrollbar-hide">
+        {categories.length > 0 ? (
+          categories.map((category) => (
             <div key={category.id} className="m-4">
               <div className="flex flex-col">
                 <img

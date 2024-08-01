@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getPopularArtist } from "../../api/PopularArtist";
 
-const ComponentOne = () => {
+const PopularArtist = () => {
   const [popularTracks, setPopularTracks] = useState([]);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ const ComponentOne = () => {
     };
     fetchPopularTracks();
   }, []);
-  console.log(popularTracks);
+  // console.log(popularTracks);
 
   return (
     <div className="w-full h-auto p-2">
@@ -45,4 +45,4 @@ const ComponentOne = () => {
   );
 };
 
-export default ComponentOne;
+export default PopularArtist;

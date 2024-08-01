@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { getPopulerAlbums } from "../../api/PopularAlbums";
+import { useNavigate } from "react-router-dom";
 
 const ComponentTwo = () => {
   const [popularAlbums, setPopularAlbums] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchPopularAlbums = async () => {
@@ -19,7 +21,12 @@ const ComponentTwo = () => {
     <div className="w-full h-auto p-2">
       <div className="flex flex-row justify-between">
         <p className="text-white text-sm font-semibold">Popular albums</p>
-        <p className="text-[#B3B3B3] text-xs cursor-pointer">show all</p>
+        <p
+          onClick={() => navigate("/albums")}
+          className="text-[#B3B3B3] text-xs cursor-pointer"
+        >
+          show all
+        </p>
       </div>
       <div className="flex flex-row justify-center overflow-x-auto scrollbar-hide">
         {limitedPopularAlbums.length > 0 ? (

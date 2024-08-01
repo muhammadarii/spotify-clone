@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 const Sidebar = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-[250px] h-screen bg-[#000000]">
+    <div className="w-[250px] h-screen bg-[#000000] overflow-y-auto scrollbar-hide">
       <div className="flex flex-col">
         <div className=" h-auto bg-[#121212] m-2 py-4 px-2 rounded-md">
           <div className="flex flex-col gap-3">
