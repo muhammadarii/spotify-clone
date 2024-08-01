@@ -19,7 +19,10 @@ const Sidebar = () => {
             >
               <img src={Logo} alt="Logo" className="w-[90px] cursor-pointer" />
             </div>
-            <div className="flex flex-row gap-1 cursor-pointer">
+            <div
+              onClick={() => navigate("/")}
+              className="flex flex-row gap-1 cursor-pointer"
+            >
               <FaHouse className="text-white text-2xl" />
               <span className="text-white">Home</span>
             </div>
