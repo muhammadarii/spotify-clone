@@ -12,7 +12,7 @@ const getHashParams = () => {
 const LoginButton = () => {
   const client_id = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
   const scope = "user-read-currently-playing";
-  const redirect_uri = "http://localhost:3000";
+  const redirect_uri = "https://spotify-cloning.vercel.app/";
   const [accessToken, setAccessToken] = useState(
     localStorage.getItem("access_token") || null
   );
