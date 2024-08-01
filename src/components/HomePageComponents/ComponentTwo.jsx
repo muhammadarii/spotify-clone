@@ -12,6 +12,7 @@ const ComponentTwo = () => {
     fetchPopularAlbums();
   }, []);
 
+  const limitedPopularAlbums = popularAlbums.slice(0, 5); //slice first 5
   // console.log(popularAlbums);
 
   return (
@@ -20,10 +21,10 @@ const ComponentTwo = () => {
         <p className="text-white text-sm font-semibold">Popular albums</p>
         <p className="text-[#B3B3B3] text-xs cursor-pointer">show all</p>
       </div>
-      <div className="flex flex-row overflow-x-auto scrollbar-hide">
-        {popularAlbums.length > 0 ? (
-          popularAlbums.map((popularAlbum) => (
-            <div key={popularAlbum.id} className="m-4">
+      <div className="flex flex-row justify-center overflow-x-auto scrollbar-hide">
+        {limitedPopularAlbums.length > 0 ? (
+          limitedPopularAlbums.map((popularAlbum) => (
+            <div key={popularAlbum.id} className=" m-4">
               <img
                 src={popularAlbum.images[0].url}
                 alt={popularAlbum.name}

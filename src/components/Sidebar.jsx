@@ -4,14 +4,19 @@ import Logo from "../img/homePage/Logo.png";
 import { FaHouse, FaBuffer } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa";
 import SearchTrack from "./SearchTrack";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-[250px] h-screen bg-[#000000]">
       <div className="flex flex-col">
         <div className=" h-auto bg-[#121212] m-2 py-4 px-2 rounded-md">
           <div className="flex flex-col gap-3">
-            <div className="flex flex-row justify-center mb-2">
+            <div
+              onClick={() => navigate("/")}
+              className="flex flex-row justify-center mb-2"
+            >
               <img src={Logo} alt="Logo" className="w-[90px] cursor-pointer" />
             </div>
             <div className="flex flex-row gap-1 cursor-pointer">

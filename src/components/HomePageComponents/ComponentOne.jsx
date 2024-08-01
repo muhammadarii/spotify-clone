@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { getPopularArtist } from "../../api/PopularArtist";
+import { useNavigate } from "react-router-dom";
 
 const ComponentOne = () => {
-  const [popularTracks, setPopularTracks] = React.useState([]);
-  const scrollRef = React.useRef(null);
+  const [popularTracks, setPopularTracks] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchPopularTracks = async () => {
@@ -13,19 +14,23 @@ const ComponentOne = () => {
     fetchPopularTracks();
   }, []);
 
-  console.log(popularTracks);
+  const limitedPopularTracks = popularTracks.slice(0, 5); //slice first 5
+  // console.log(popularTracks);
 
   return (
     <div className="w-full h-auto p-2">
       <div className="flex flex-row justify-between items-center">
         <p className="text-white text-sm font-semibold">Popular Artists</p>
+        <p
+          onClick={() => navigate("/artist")}
+          className="text-[#B3B3B3] text-xs cursor-pointer"
+        >
+          show all
+        </p>
       </div>
-      <div
-        className="flex flex-row overflow-x-auto scrollbar-hide mt-2"
-        ref={scrollRef}
-      >
-        {popularTracks.length > 0 ? (
-          popularTracks.map((track) => (
+      <div className="flex flex-row justify-center  mt-2">
+        {limitedPopularTracks.length > 0 ? (
+          limitedPopularTracks.map((track) => (
             <div key={track.id} className="m-4 flex-shrink-0">
               <img
                 src={track.album.images[0].url}

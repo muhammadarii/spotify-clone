@@ -36,7 +36,7 @@ const LoginButton = () => {
     redirect_uri
   )}&scope=${encodeURIComponent(scope)}`;
 
-  console.log("Access Token:", accessToken);
+  // console.log("Access Token:", accessToken);
 
   return (
     <div>
